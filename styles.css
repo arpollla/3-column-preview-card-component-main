@@ -30,9 +30,7 @@ main {
     place-content: center;
     grid-template-columns: auto auto auto;
     margin: auto;
-    overflow: hidden;
     border: none;
-    border-radius: 0.5rem;
 }
 
 img {
@@ -59,6 +57,7 @@ p {
 
 .sedans {
     background-color: var(--Bright-orange);
+    border-radius: 0.5rem 0 0 0.5rem;
 }
 
 
@@ -69,6 +68,7 @@ p {
 
 .luxury {
     background-color: var(--Very-dark-cyan);
+    border-radius: 0 0.5rem 0.5rem 0;
 }
 
 /* BUTTONS */
@@ -102,7 +102,9 @@ button:hover {
 
 @media screen and (max-width: 376px) {
     main {
-        width: 80%;
+        width: 100%;
+        padding: 1.5em;
+        margin: auto;
         grid-template-columns: auto;
     }
 
@@ -112,5 +114,19 @@ button:hover {
     
     button {
         margin-top: 1em;
+    }
+
+    .sedans {
+        border-radius: 0.5rem 0.5rem 0 0;
+        max-width: 100%;
+    }
+
+    .suvs {
+        max-width: 100%;
+    }
+
+    .luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+        max-width: 100%;
     }
 }
