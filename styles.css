@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-size: 15px;
+    color: var(--Transparent-white);
+    font-family: 'Lexend Deca',  sans-serif;
+    background-color: var(--Very-light-gray);
+}
+
+main {
+    width: 60%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    overflow: hidden;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+img {
+    width: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 3rem;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+    margin: 1em 0;
+}
+
+p {
+    height: 50%;
+    line-height: 2em;
+}
+
+.sedans {
+    background-color: var(--Bright-orange);
+}
+
+
+
+.suvs {
+    background-color: var(--Dark-cyan);
+}
+
+.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+/* BUTTONS */
+button {
+    height: 4em;
+    margin-top: 5em;
+    margin-bottom: 1em;
+    width: 60%;
+    border: solid 2px white;
+    border-radius: 2em;
+    font-family: 'Lexend Deca';
+}
+
+.sedans button {
+    color: var(--Bright-orange);
+}
+
+.suvs button {
+    color: var(--Dark-cyan);
+}
+
+.luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+button:hover {
+    background-color: inherit;
+    cursor: pointer;
+    color: var(--Very-light-gray);
+}
+
+@media screen and (max-width: 376px) {
+    main {
+        width: 80%;
+        grid-template-columns: auto;
+    }
+
+    img {
+        width: 60px;
+    }
+    
+    button {
+        margin-top: 1em;
+    }
+}
